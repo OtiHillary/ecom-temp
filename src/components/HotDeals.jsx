@@ -11,7 +11,7 @@ export default function HotDeals(){
       .then(res=>res.json())
       .then(json => {
          console.log(json)
-         setProducts(prevProducts => json)
+         setProducts(json)
       })
    }, [])
 

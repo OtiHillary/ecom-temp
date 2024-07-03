@@ -1,4 +1,4 @@
-import { useState, useRef, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { CallOutgoing, People, TruckFast, Star1, ShoppingCart, ArrowLeft3, ArrowRight3 } from 'iconsax-react'
 import Skeleton from 'react-loading-skeleton';
 
@@ -49,7 +49,7 @@ export default function ProductPreview () {
       .then(res=>res.json())
       .then(json => {
          console.log(json)
-         setCategories(prevCategories => json)
+         setCategories(json)
       })
 
    }, [])
@@ -61,7 +61,7 @@ export default function ProductPreview () {
       .then(res=>res.json())
       .then(json => {
          console.log(json)
-         setProducts(prevProducts => json)
+         setProducts(json)
       })
    }
 
